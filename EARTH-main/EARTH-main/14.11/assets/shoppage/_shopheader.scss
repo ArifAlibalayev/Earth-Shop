@@ -1,0 +1,221 @@
+#shopheader {
+  max-width: 100%;
+  min-height: 5vh;
+}
+
+#shopmain {
+  display: flex;
+  margin-top: 70px;
+}
+
+.leftside {
+  min-height: 80vh;
+  max-width: 30%;
+  width: 100%;
+  // background-color: aqua;
+  border-right: 1px solid rgba($color: #888888, $alpha: 0.5);
+}
+
+.rightside {
+  min-height: 80vh;
+  max-width: 70%;
+  width: 100%;
+  // background-color: brown;
+}
+
+.rightside {
+  header {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    margin-bottom: 80px;
+    p {
+      line-height: 50px;
+      color: #888888;
+    }
+    h1 {
+      color: #74a84a;
+      line-height: 100px;
+      font-size: 64px;
+      letter-spacing: 2px;
+      font-weight: 100;
+    }
+  }
+}
+
+.rightsidefilter {
+  display: flex;
+  max-width: 1000px;
+  justify-content: space-between;
+  padding-left: 50px;
+  margin-bottom: 50px;
+  p {
+    letter-spacing: 1px;
+  }
+  select {
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 100;
+  }
+}
+
+.rightsidecardwrapper {
+  padding-left: 50px;
+  margin-bottom: 50px;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  .card {
+    width: 100%;
+    position: relative;
+    transition: 0.3s linear;
+    .add-to-cart {
+      width: 100px;
+      height: 20px;
+      color: white;
+      background-color: rgb(5, 161, 5);
+      position: absolute;
+      display: grid;
+      place-content: center;
+      border-radius: 2px;
+      top: 6%;
+      right: 15%;
+      font-size: 12px;
+      cursor: pointer;
+      opacity: 0;
+      transition: 0.3s linear;
+    }
+    &:hover .card-shopcart {
+      opacity: 0.5 !important;
+    }
+    .card-shopcart {
+      cursor: pointer;
+      &:hover {
+        opacity: 1 !important;
+      }
+      &:hover + .add-to-cart {
+        opacity: 1;
+      }
+    }
+    .card-shopcart {
+      position: absolute;
+      display: grid;
+      place-content: center;
+      top: 5%;
+      right: 5%;
+      color: green;
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      opacity: 0;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .card-content {
+      p {
+        color: grey;
+        font-weight: 100;
+        padding: 15px 0;
+      }
+      strong {
+        display: flex;
+      }
+    }
+  }
+}
+
+.leftside {
+  .leftsearch {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+    .searchicon {
+      color: white;
+      background-color: #74a84a;
+      width: 50px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: 0.3s linear;
+      &:hover {
+        background-color: #4e7032;
+      }
+    }
+  }
+  .leftfilter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+    // input{
+    //     color: #74a84a;
+    //     -webkit-appearance: none;
+    //     appearance: none;
+
+    // }
+    input[type=range] {
+        box-sizing: border-box;
+        appearance: none;
+        width: 200px;
+        margin: 0;
+        padding: 0 2px;
+        /* Add some L/R padding to ensure box shadow of handle is shown */
+        overflow: hidden;
+        border: 0;
+        border-radius: 1px;
+        outline: none;
+        background: linear-gradient(grey, grey) no-repeat center;
+        /* Use a linear gradient to generate only the 2px height background */
+        background-size: 100% 2px;
+        pointer-events: none;
+     
+        &:active,
+        &:focus {
+           outline: none;
+        }
+     
+        &::-webkit-slider-thumb {
+           height: 28px;
+           width: 28px;
+           border-radius: 28px;
+           background-color: #f00;
+           position: relative;
+           margin: 5px 0;
+           /* Add some margin to ensure box shadow is shown */
+           cursor: pointer;
+           appearance: none;
+           pointer-events: all;
+           box-shadow: 0 1px 4px 0.5px rgba(0, 0, 0, 0.25);
+     
+        }
+     }
+     
+     .multi-range {
+        position: relative;
+        height: 50px;
+     
+        input[type=range] {
+           position: absolute;
+           
+           &:nth-child(1) {
+              &::-webkit-slider-thumb::before {
+                 background-color: red;
+              }
+           }
+     
+           &:nth-child(2) {
+              background: none;
+     
+              &::-webkit-slider-thumb::before {
+                  background-color: grey; 
+              }
+           }
+        }
+     }
+  }
+}

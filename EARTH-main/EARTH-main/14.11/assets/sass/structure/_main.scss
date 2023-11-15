@@ -1,0 +1,212 @@
+#main {
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+.cardwrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    .card {
+        width: 100%;
+        position: relative;
+        transition: .3s linear;
+        &:hover .card-shopcart {
+            opacity: 0.5 !important;
+        }
+        .card-content {
+            p {
+                color: grey;
+                font-weight: 100;
+                padding: 15px 0;
+            }
+            strong {
+                display: flex;
+            }
+        }
+        .card-shopcart {
+            position: absolute;
+            display: grid;
+            place-content: center;
+            top: 5%;
+            right: 5%;
+            color: green;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            opacity: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover {
+                opacity: 1 !important;
+            }
+            &:hover+.add-to-cart {
+                opacity: 1;
+            }
+        }
+        .add-to-cart {
+            width: 100px;
+            height: 20px;
+            color: white;
+            background-color: rgb(5, 161, 5);
+            position: absolute;
+            display: grid;
+            place-content: center;
+            border-radius: 2px;
+            top: 6%;
+            right: 15%;
+            font-size: 12px;
+            cursor: pointer;
+            opacity: 0;
+            transition: .3s linear;
+        }
+    }
+}
+
+.feedbackcardwrapper {
+    display: flex;
+    gap: 120px;
+}
+
+hr {
+    margin: 70px 0;
+    color: grey;
+    opacity: 0.5;
+}
+
+.Customer-Feedback {
+    display: flex;
+    max-width: 1200px;
+    min-height: 60vh;
+    padding: 20px;
+    flex-direction: column;
+    margin: auto;
+    .Feedback-Title {
+        letter-spacing: 3px;
+        word-spacing: 3px;
+        font-size: 24PX;
+    }
+    .Feedback-Card {
+        margin: 50px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 300px;
+        min-height: 12vh;
+        .Feedback-content {
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+    i {
+        font-size: 30px;
+        color: rgb(6, 75, 6);
+    }
+    .customer {
+        line-height: 30px;
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .customername {
+            line-height: 20px;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.giftsection {
+    background-image: url(/14.11/assets/imgs/Call-to-action.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    min-height: 50vh;
+    display: grid;
+    place-items: center;
+    .postcard {
+        max-width: 1200px;
+        margin: auto;
+        width: 100%;
+        min-height: 15vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+    h2 {
+        font-size: 52px;
+        font-weight: 100;
+    }
+    p {
+        font-size: 16px;
+    }
+    .postbtn {
+        button {
+            border: none;
+            outline: none;
+            background-color: #74a84a;
+            width: 300px;
+            height: 50px;
+            color: white;
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 2px;
+            transition: .3s linear;
+            &:hover {
+                background-color: rgb(10, 94, 10);
+            }
+        }
+    }
+}
+
+.Guarantees {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 30vh;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    flex-wrap: wrap;
+    padding: 20px;
+    .grt-card {
+        display: flex;
+        gap: 30px;
+        i {
+            background-color: rgb(1, 67, 1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            display: grid;
+            place-items: center;
+        }
+        .grtcontent {
+            line-height: 30px;
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .cardwrapper {
+        flex-wrap: wrap;
+    }
+    .feedbackcardwrapper {
+        flex-wrap: wrap;
+    }
+}
+
+.menu-active {
+    display: block !important;
+}

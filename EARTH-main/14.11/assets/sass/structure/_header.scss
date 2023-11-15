@@ -1,0 +1,105 @@
+#header{
+    background-image: url(/assets/imgs/Banner.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    min-height:80vh;
+}
+
+.nav-bar{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    min-height: 5vh;
+    padding-top: 40px;
+    h1{
+        letter-spacing: 3px;
+        font-size: 32px;
+    }
+
+    ul{
+        display: flex;
+        gap: 40px;
+        font-size: 20px;
+        align-items: center;
+        letter-spacing: 2px;
+    }
+
+    .icons{
+      display: flex;
+      gap: 20px;
+      font-size: 30px;
+      i{
+        display: grid;
+        place-items: center;
+      }
+      .fa-bag-shopping{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        
+        
+        .amount{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            display: grid;
+            place-content: center;
+            border-radius: 50%;
+        }
+      }
+    }
+}
+
+.welcome-section{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 60vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    h1{
+    color: rgb(2, 80, 2);
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    }
+    h2{
+        color: rgb(2, 80, 2);
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 5px;   
+        font-weight: 100; 
+        text-align: center;
+    }
+
+    .welcome-btn{
+        button{
+            border: none;
+            outline: none;
+            background-color: #74a84a;
+            width: 200px;
+            height: 50px;
+            color: white;
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 2px;
+            transition: .3s linear;
+            &:hover{
+                background-color: rgb(10, 94, 10);
+
+            }
+        }
+    }
+}
